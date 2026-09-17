@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin | Stanno eFootball</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        ⚡ STANNO
+        <span>eFOOTBALL</span>
+    </div>
+
+    <nav>
+
+        <a href="/dashboard">
+            Dashboard
+        </a>
+
+        <a href="/logout"
+           class="login-btn">
+            Logout
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="admin-page">
+
+    <div class="admin-heading">
+
+        <p class="section-label">
+            ADMINISTRATOR
+        </p>
+
+        <h1>
+            Control Center 👑
+        </h1>
+
+        <p>
+            Manage authorized members of
+            Stanno eFootball.
+        </p>
+
+    </div>
+
+
+    <section class="admin-panel">
+
+        <h2>
+            👥 Members
+        </h2>
+
+        <div id="users">
+
+            Loading users...
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="logo">
+        ⚡ STANNO
+        <span>eFOOTBALL</span>
+    </div>
+
+    <p>
+        Administrator Control Center
+    </p>
+
+</footer>
+
+
+<script>
+
+async function loadUsers() {
+
+    const response =
+        await fetch("/admin/users");
+
+    if (!response.ok) {
+
+        document.getElementById("users").textContent =
+            "Unable to load users.";
+
+        return;
+    }
+
+    const users =
+        await response.json();
+
+    const container =
+        document.getElementById("users");
+
+    container.innerHTML = "";
+
+
+    users.forEach(user => {
+
+        const userCard =
+            document.createElement("div");
+
+        userCard.className = "user-card";
+
+
+        const status =
+            user.authorized
+                ? "✅ Authorized"
+                : "⏳ Pending";
+
+
+        userCard.innerHTML = `
+
+            <div>
+
+                <h3>${user.username}</h3>
+
+                <p>
+                    Role: ${user.role}
+                </p>
+
+                <p>
+                    ${status}
+                </p>
+
+            </div>
+
+            <div class="user-actions">
+
+                ${
+                    user.authorized
+
+                    ? `
+                    <form
+                        action="/admin/disable"
+                        method="POST">
+
+                        <input
+                            type="hidden"
+                            name="username"
+                            value="${user.username}">
+
+                        <button type="submit">
+                            🚫 Disable
+                        </button>
+
+                    </form>
+                    `
+
+                    : `
+                    <form
+                        action="/admin/authorize"
+                        method="POST">
+
+                        <input
+                            type="hidden"
+                            name="username"
+                            value="${user.username}">
+
+                        <button type="submit">
+                            ✅ Authorize
+                        </button>
+
+                    </form>
+                    `
+                }
+
+            </div>
+        `;
+
+
+        container.appendChild(userCard);
+
+    });
+
+}
+
+
+loadUsers();
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,399 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Stanno eFootball</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+        ⚡ STANNO
+        <span>eFOOTBALL</span>
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="#matches">
+            Matches
+        </a>
+
+        <a href="#tournaments">
+            Tournaments
+        </a>
+
+        <a href="#videos">
+            Videos
+        </a>
+
+        <a href="/logout"
+           class="login-btn">
+            Logout
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="dashboard">
+
+
+    <!-- WELCOME -->
+
+    <section class="dashboard-welcome">
+
+        <p class="section-label">
+            MEMBERS AREA
+        </p>
+
+        <h1>
+            Welcome, Gamer! 👋
+        </h1>
+
+        <p>
+            Welcome to your Stanno eFootball
+            gaming dashboard.
+        </p>
+
+    </section>
+
+
+
+    <!-- STATS -->
+
+    <section class="stats">
+
+        <div class="stat-card">
+
+            <span>⚽</span>
+
+            <h2>24</h2>
+
+            <p>Matches</p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span>🏆</span>
+
+            <h2>3</h2>
+
+            <p>Tournaments</p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span>🎥</span>
+
+            <h2>12</h2>
+
+            <p>Videos</p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span>🎯</span>
+
+            <h2>18</h2>
+
+            <p>Tactics</p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FEATURES -->
+
+    <section class="dashboard-section"
+             id="matches">
+
+        <h2>
+            ⚽ Matches
+        </h2>
+
+        <div class="dashboard-grid">
+
+            <div class="dashboard-card">
+
+                <span>🎮</span>
+
+                <h3>
+                    Recent Matches
+                </h3>
+
+                <p>
+                    View recent eFootball
+                    matches and results.
+                </p>
+
+                <button>
+                    View Matches
+                </button>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <span>🏆</span>
+
+                <h3>
+                    Tournament Center
+                </h3>
+
+                <p>
+                    Follow fixtures,
+                    results and rankings.
+                </p>
+
+                <button>
+                    Open Tournaments
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+<!-- CONTENT -->
+
+<section class="dashboard-section" id="content">
+
+    <p class="section-label">
+        STANNO GAMING
+    </p>
+
+    <h2>
+        🎮 Featured Content
+    </h2>
+
+    <div class="dashboard-grid">
+
+        <div class="dashboard-card">
+
+            <span>🎥</span>
+
+            <h3>
+                Latest eFootball Gameplay
+            </h3>
+
+            <p>
+                Watch the latest Stanno eFootball
+                gameplay and match highlights.
+            </p>
+
+            <button onclick="watchVideo()">
+                ▶ Watch Video
+            </button>
+
+        </div>
+
+
+        <div class="dashboard-card">
+
+            <span>🎯</span>
+
+            <h3>
+                eFootball Tactics
+            </h3>
+
+            <p>
+                Discover formations, tactics and
+                gameplay tips for your next match.
+            </p>
+
+            <button onclick="showTactics()">
+                View Tactics
+            </button>
+
+        </div>
+
+
+        <div class="dashboard-card">
+
+            <span>🏆</span>
+
+            <h3>
+                Tournament Center
+            </h3>
+
+            <p>
+                Check tournament fixtures,
+                results and upcoming competitions.
+            </p>
+
+            <button onclick="showTournaments()">
+                View Tournaments
+            </button>
+
+        </div>
+
+
+        <div class="dashboard-card">
+
+            <span>🔥</span>
+
+            <h3>
+                Members Only
+            </h3>
+
+            <p>
+                Exclusive content available only
+                to authorized Stanno members.
+            </p>
+
+            <button onclick="showMembers()">
+                Open Members Area
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- RECENT MATCHES -->
+
+<section class="dashboard-section">
+
+    <p class="section-label">
+        MATCH CENTER
+    </p>
+
+    <h2>
+        ⚽ Recent Matches
+    </h2>
+
+
+    <div class="match-list">
+
+        <div class="match">
+
+            <div>
+                <strong>
+                    Stanno FC
+                </strong>
+
+                <span>
+                    vs
+                </span>
+
+                <strong>
+                    Gamer United
+                </strong>
+            </div>
+
+            <b>
+                3 - 1
+            </b>
+
+        </div>
+
+
+        <div class="match">
+
+            <div>
+                <strong>
+                    Stanno FC
+                </strong>
+
+                <span>
+                    vs
+                </span>
+
+                <strong>
+                    eFootball Kings
+                </strong>
+            </div>
+
+            <b>
+                2 - 2
+            </b>
+
+        </div>
+
+
+        <div class="match">
+
+            <div>
+                <strong>
+                    Stanno FC
+                </strong>
+
+                <span>
+                    vs
+                </span>
+
+                <strong>
+                    Pro Gamers
+                </strong>
+            </div>
+
+            <b>
+                4 - 0
+            </b>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<footer>
+
+    <div class="logo">
+        ⚡ STANNO
+        <span>eFOOTBALL</span>
+    </div>
+
+    <p>
+        Members Gaming Dashboard
+    </p>
+
+    <p class="copyright">
+        © 2026 Stanno eFootball.
+        All rights reserved.
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
+```

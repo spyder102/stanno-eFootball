@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Register | Stanno eFootball</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        ⚡ STANNO
+        <span>eFOOTBALL</span>
+    </div>
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="login.html"
+           class="login-btn">
+            Login
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="login-page">
+
+    <div class="login-box">
+
+        <div class="card-icon">
+            🎮
+        </div>
+
+        <p class="section-label">
+            JOIN THE COMMUNITY
+        </p>
+
+        <h1>
+            Create Account
+        </h1>
+
+        <p class="login-description">
+            Create your Stanno eFootball account.
+            Your account must be approved by an administrator
+            before you can access members-only content.
+        </p>
+
+
+        <form action="/register" method="POST">
+
+            <label for="username">
+                Username
+            </label>
+
+            <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Choose a username"
+                minlength="3"
+                required
+            >
+
+
+            <label for="password">
+                Password
+            </label>
+
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Create a password"
+                minlength="8"
+                required
+            >
+
+
+            <button type="submit">
+                🎮 CREATE ACCOUNT
+            </button>
+
+        </form>
+
+
+        <p class="register-note">
+            Already have an account?
+        </p>
+
+        <a class="back-home"
+           href="login.html">
+            Login here →
+        </a>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <div class="logo">
+        ⚡ STANNO
+        <span>eFOOTBALL</span>
+    </div>
+
+    <p>
+        Your home for eFootball gaming.
+    </p>
+
+</footer>
+
+</body>
+
+</html>

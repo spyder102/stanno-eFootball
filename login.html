@@ -1,0 +1,95 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Stanno eFootball</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body class="login-page">
+
+
+    <div class="login-container">
+
+        <div class="login-logo">
+            ⚡ STANNO
+            <span>eFOOTBALL</span>
+        </div>
+
+
+        <h1>Welcome Back</h1>
+
+        <p class="login-subtitle">
+            Login to access the Stanno eFootball members area.
+        </p>
+
+
+        <form action="/login" method="POST">
+
+            <label for="username">
+                Username
+            </label>
+
+            <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Enter your username"
+                required
+            >
+
+
+            <label for="password">
+                Password
+            </label>
+
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                required
+            >
+
+
+            <button type="submit">
+                🔐 LOGIN
+            </button>
+
+        </form>
+
+
+        <p id="loginMessage"></p>
+        <p class="register-note">
+    Don't have an account?
+</p>
+
+<a class="back-home"
+   href="register.html">
+    Create an account →
+</a>
+
+
+        <a href="index.html" class="back-home">
+            ← Back to Home
+        </a>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
